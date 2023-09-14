@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%--<c:set var="path0" value="${pageContext.request.contextPath }" />--%>
-<c:set var="path0" value="/pro03" />
+<c:set var="path0" value="<%=request.getContextPath() %>" />
 <!-- 메타포 -->
 <!-- 오픈그래프 -->
 <!-- 기타 설정 -->
@@ -15,4 +15,5 @@
 <style>
 /* 공통 사용자 정의 스타일 */
 #ft { border-top:3px solid #369; }
+.control { margin-top:10px; margin-bottom:10px; }
 </style>

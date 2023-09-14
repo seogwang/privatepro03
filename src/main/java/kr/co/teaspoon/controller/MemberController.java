@@ -158,6 +158,8 @@ public class MemberController {
             session.setAttribute("member", member);
             session.setAttribute("sid", member.getId());
             rttr.addFlashAttribute("msg", "로그인 성공");
+//            String referer = request.getHeader("Referer"); 왜 리퀘스트 오류 나지?
+//            return "redirect:"+referer;
             return "redirect:/";
         } else {
             session.setAttribute("member", null);

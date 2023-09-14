@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.co.teaspoon.dto.Board;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class BoardDAOImpl implements BoardDAO {
@@ -19,6 +20,7 @@ public class BoardDAOImpl implements BoardDAO {
         return sqlSession.selectList("board.boardList");
     }
 
+    @Transactional
     @Override
     public Board boardDetail(int seq) throws Exception {
         sqlSession.update("board.countUp", seq);

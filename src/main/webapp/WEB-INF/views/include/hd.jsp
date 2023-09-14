@@ -10,8 +10,8 @@
 <header id="hd" class="container is-fullhd">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            <a class="navbar-item" href="${path1 }">
+                <img src="${path1 }/resources/img/logo.png" width="71" height="28">
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -33,15 +33,18 @@
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        커뮤니티
+                        Community
                     </a>
 
                     <div class="navbar-dropdown">
                         <a href="${path1 }/board/list.do" class="navbar-item">
-                            게시판
+                            Board
                         </a>
                         <a href="${path1 }/sample2/list.do" class="navbar-item">
                             Sample
+                        </a>
+                        <a href="${path1 }/free/list.do" class="navbar-item">
+                            Free
                         </a>
                         <a class="navbar-item">
                             Contact
@@ -59,23 +62,23 @@
                     <div class="buttons">
                     <c:if test="${!empty sid}">
                         <a href="${path1}/member/mypage.do" class="button is-primary">
-                            <strong>마이페이지</strong>
+                            <strong>MyPage</strong>
                         </a>
                         <a href="${path1}/member/logout.do" class="button is-light">
-                            로그아웃
+                            LogOut
                         </a>
                     </c:if>
                     <c:if test="${empty sid}">
                         <a href="${path1}/member/term.do" class="button is-primary">
-                            <strong>회원가입</strong>
+                            <strong>Sign up</strong>
                         </a>
                         <a href="${path1}/member/login.do" class="button is-light">
-                            로그인
+                            Log in
                         </a>
                     </c:if>
                     <c:if test="${sid.equals('admin')}">
                         <a href="${path1}/member/list.do" class="button is-light">
-                            회원목록
+                            MemberList
                         </a>
                     </c:if>
                     </div>

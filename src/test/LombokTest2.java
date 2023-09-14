@@ -33,7 +33,7 @@ public class LombokTest2 {
     public void testLombok(){
         Sample dto = new Sample();
         dto.setNo(1);
-        dto.setName("김기태");
+        dto.setName("서광");
         System.out.println(dto.toString());
         log.info(dto.toString());
     }

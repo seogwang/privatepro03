@@ -20,7 +20,7 @@ public class SampleController {
 
     @RequestMapping("main.do")     //Get방식, localhost:8081/pro03_war/sample/main.do
     public String sample(Locale locale, Model model) throws Exception {
-        model.addAttribute("user", "김기태");
+        model.addAttribute("user", "서광");
         return "/sample/main";
     }
 
