@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +53,7 @@
 		      	<c:forEach items="${eventList }" var="event" varStatus="status">
 		      		<tr>
 		      			<td>${status.count }</td>
-		      			<td><a href="${path1}/event/detail.do?bno=${event.bno }">${event.title }</a></td>
+		      			<td><a href="${path999}/event/detail.do?bno=${event.bno }">${event.title }</a></td>
 		      			<td>
 	      					<fmt:parseDate value="${event.regdate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />
 	      					<fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" />
@@ -72,7 +72,7 @@
 			      	    <%-- <c:if test='${sid eq "admin"}'>  --%> 
 		      	<div class="button-group">
 					<c:if test="${sid.equals('admin')}">
-						<a class="button is-info" href="${path1 }/event/insert.do">글쓰기</a>
+						<a class="button is-info" href="${path999 }/event/insert.do">글쓰기</a>
 					</c:if>
 				</div>
 			<%-- </c:if> --%>

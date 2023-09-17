@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,12 +21,13 @@
 	<figure class="visual" id="vs1">
 		<ul class="imgbox">
 			<li class="hero is-medium is-link">
-				<div class="hero-body">
-					<p class="title">
-						Medium hero
+				<div class="hero-body" style="background-size: 100%; background-image: url('${path999}/resources/img/backgroundmk.jpg'); background-position: 0px -270px;">
+					<p class="title" style="color: white; font-weight: bold; padding-top: 70px;">
+						TSPOON
 					</p>
-					<p class="subtitle">
-						Medium subtitle
+					<p class="subtitle" style="color: white; font-weight: bold; ">
+						내 아이의 하루를 담다.<br>
+						부모의 하루를 열다.<br>
 					</p>
 				</div>
 			</li>
@@ -67,9 +68,9 @@
 		      	</tbody>
 		      </table>
 				<div class="button-group">
-				  <a class="button is-info" href="${path1 }/free/list.do">글 목록</a>
-				  <a class="button is-primary" href="${path1 }/free/delete.do?bno=${dto.bno}">글 삭제</a>
-				  <a class="button is-danger" href="${path1 }/free/edit.do?bno=${dto.bno}">글 수정</a>
+				  <a class="button is-info" href="${path999 }/free/list.do">글 목록</a>
+				  <a class="button is-primary" href="${path999 }/free/delete.do?bno=${dto.bno}">글 삭제</a>
+				  <a class="button is-danger" href="${path999 }/free/edit.do?bno=${dto.bno}">글 수정</a>
 				</div>
 	      </div>
 	    </div>

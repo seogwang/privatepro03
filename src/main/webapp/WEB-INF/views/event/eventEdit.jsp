@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +13,7 @@
 	<title>글 수정하기</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
-    <script type="text/javascript" src="${path1 }/resources/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="${path999 }/resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -38,7 +38,7 @@
 	      <h2 class="h1">이벤트 게시판 글 수정</h2>
 	      <hr>
 	      <div class="container">
-	      	<form action="${path1 }/event/edit.do" method="post">
+	      	<form action="${path999 }/event/edit.do" method="post">
 			      <table id="table1">
 			      	<tbody>
 			      		<tr>
@@ -55,14 +55,14 @@
 			      				${dto.content }
 			      				</textarea>
 			      				<script>
-			      				CKEDITOR.replace('content',	{filebrowserUploadUrl:'${path1}/event/imageUpload.do'});
+			      				CKEDITOR.replace('content',	{filebrowserUploadUrl:'${path999}/event/imageUpload.do'});
 			      				</script>
 			      			</td>
 			      		</tr>
 			      		<tr>
 			      			<td colspan="2">
 			      				<input type="submit" class="submit button is-danger" value="글 수정" >
-			      				<a class="button is-info" href="${path1 }/event/list.do">글 목록</a>
+			      				<a class="button is-info" href="${path999 }/event/list.do">글 목록</a>
 			      			</td>
 			      		</tr>
 			      	</tbody>

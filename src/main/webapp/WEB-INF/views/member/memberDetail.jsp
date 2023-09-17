@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +42,7 @@
                     <h2 class="page_tit">마이 페이지</h2>
                 </c:if>
                 <hr>
-                <form action="${path1 }/member/update.do" method="post" onsubmit="return updateCheck(this)">
+                <form action="${path999 }/member/update.do" method="post" onsubmit="return updateCheck(this)">
                     <div class="table_form_wrap">
                         <table class="table_form">
                             <tbody>
@@ -97,13 +97,13 @@
                                     <input type="submit" class="button btn-writer" value="회원정보수정">
                                     <input type="reset" class="button btn-primary" value="취소">
                                     <c:if test="${sid=='admin' }">
-                                        <a href="${path1 }/member/delete.do?id=${member.id }" class="button is-primary">직권 강퇴</a>
+                                        <a href="${path999 }/member/delete.do?id=${member.id }" class="button is-primary">직권 강퇴</a>
                                     </c:if>
                                     <c:if test="${sid!='admin' }">
-                                        <a href="${path1 }/member/delete.do?id=${sid }" class="button is-primary">회원 탈퇴</a>
+                                        <a href="${path999 }/member/delete.do?id=${sid }" class="button is-primary">회원 탈퇴</a>
                                     </c:if>
                                     <c:if test="${sid=='admin' }">
-                                        <a href="${path1 }/member/list.do" class="button is-primary">회원 목록</a>
+                                        <a href="${path999 }/member/list.do" class="button is-primary">회원 목록</a>
                                     </c:if>
                                 </td>
                             </tr>

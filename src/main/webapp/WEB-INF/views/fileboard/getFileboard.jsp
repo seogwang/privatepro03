@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,12 +23,13 @@
 	<figure class="visual" id="vs1">
 		<ul class="imgbox">
 			<li class="hero is-medium is-link">
-				<div class="hero-body">
-					<p class="title">
-						Medium hero
+				<div class="hero-body" style="background-size: 100%; background-image: url('${path999}/resources/img/backgroundmk.jpg'); background-position: 0px -270px;">
+					<p class="title" style="color: white; font-weight: bold; padding-top: 70px;">
+						TSPOON
 					</p>
-					<p class="subtitle">
-						Medium subtitle
+					<p class="subtitle" style="color: white; font-weight: bold; ">
+						내 아이의 하루를 담다.<br>
+						부모의 하루를 열다.<br>
 					</p>
 				</div>
 			</li>
@@ -57,7 +58,7 @@
 					  <th>첨부 파일</th>
 					  <td>
 						  <c:forEach var="file" items="${fileboard.fileList}">
-							  <a href="${path1}/resources/upload/${file.originFile}" title="${file.fileSize}" download>${file.originFile}</a>
+							  <a href="${path999}/resources/upload/${file.originFile}" title="${file.fileSize}" download>${file.originFile}</a>
 						  </c:forEach>
 						  <c:if test="${empty fileboard.fileList}">
 							  첨부된 파일이 없습니다.
@@ -74,10 +75,10 @@
 				  </tr>
 				  <tr>
 					  <td>
-						  <a href="${path1}/file/filelist1.do" class="button is-primary">파일 자료 목록</a>
+						  <a href="${path999}/file/filelist1.do" class="button is-primary">파일 자료 목록</a>
 						  <c:if test="${sid.equals('admin')}">
-							  <a href="${path1}/file/removeFileboard.do?postNo=${fileboard.fileBoard.postNo}" class="button is-danger">자료 삭제</a>
-							  <a href="${path1}/file/modifyFileboard.do?postNo=${fileboard.fileBoard.postNo}" class="button is-info">자료 수정</a>
+							  <a href="${path999}/file/removeFileboard.do?postNo=${fileboard.fileBoard.postNo}" class="button is-danger">자료 삭제</a>
+							  <a href="${path999}/file/modifyFileboard.do?postNo=${fileboard.fileBoard.postNo}" class="button is-info">자료 수정</a>
 						  </c:if>
 					  </td>
 				  </tr>

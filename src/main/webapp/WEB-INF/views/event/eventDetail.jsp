@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,10 +67,10 @@
 		      	</tbody>
 		      </table>
 				<div class="button-group">
-				  <a class="button is-info" href="${path1 }/event/list.do">글 목록</a>
+				  <a class="button is-info" href="${path999 }/event/list.do">글 목록</a>
 					<c:if test="${sid.equals('admin')}">
-					  <a class="button is-primary" href="${path1 }/event/delete.do?bno=${dto.bno}">글 삭제</a>
-					  <a class="button is-danger" href="${path1 }/event/edit.do?bno=${dto.bno}">글 수정</a>
+					  <a class="button is-primary" href="${path999 }/event/delete.do?bno=${dto.bno}">글 삭제</a>
+					  <a class="button is-danger" href="${path999 }/event/edit.do?bno=${dto.bno}">글 수정</a>
 					</c:if>
 				</div>
 	      </div>

@@ -5,13 +5,13 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!-- 헤더 내용 기술 -->
 <header id="hd" class="container is-fullhd">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="${path1}">
-                <img src="${path1}/resources/img/logo.png" width="112" height="28">
+            <a class="navbar-item" href="${path999}">
+                <img src="${path999}/resources/img/logo.png" width="112" height="28">
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -37,20 +37,20 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a href="${path1 }/board/list.do" class="navbar-item">
+                        <a href="${path999 }/board/list.do" class="navbar-item">
                             공지사항
                         </a>
-                        <!-- <a href="${path1 }/sample2/list.do" class="navbar-item">
+                        <!-- <a href="${path999 }/sample2/list.do" class="navbar-item">
                             Sample
                         </a> -->
-                        <a href="${path1 }/free/list.do" class="navbar-item">
+                        <a href="${path999 }/free/list.do" class="navbar-item">
                             자유게시판
                         </a>
-                        <a href="${path1 }/file/filelist1.do" class="navbar-item">
+                        <a href="${path999 }/file/filelist1.do" class="navbar-item">
                             자료실
                         </a>
                         <c:if test="${sid.equals('admin')}">
-                            <a href="${path1 }/file/fileupload1.do" class="navbar-item">
+                            <a href="${path999 }/file/fileupload1.do" class="navbar-item">
                                 파일업로드
                             </a>
                         </c:if>
@@ -69,13 +69,13 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a href="${path1 }/event/list.do" class="navbar-item">
+                        <a href="${path999 }/event/list.do" class="navbar-item">
                             진행중인 이벤트
                         </a>
-                        <a href="${path1 }/eventwinner/list.do" class="navbar-item">
+                        <a href="${path999 }/eventwinner/list.do" class="navbar-item">
                             이벤트 당첨자
                         </a>
-                        <a href="${path1 }/survey/list.do" class="navbar-item">
+                        <a href="${path999 }/survey/list.do" class="navbar-item">
                             윜이슈(설문)
                         </a>
                     </div>
@@ -86,23 +86,23 @@
                 <div class="navbar-item">
                     <div class="buttons">
                         <c:if test="${!empty sid}">
-                            <a href="${path1}/member/mypage.do" class="button is-primary">
+                            <a href="${path999}/member/mypage.do" class="button is-primary">
                                 <strong>MyPage</strong>
                             </a>
-                            <a href="${path1}/member/logout.do" class="button is-light">
+                            <a href="${path999}/member/logout.do" class="button is-light">
                                 LogOut
                             </a>
                         </c:if>
                         <c:if test="${empty sid}">
-                            <a href="${path1}/member/term.do" class="button is-primary">
+                            <a href="${path999}/member/term.do" class="button is-primary">
                                 <strong>Sign up</strong>
                             </a>
-                            <a href="${path1}/member/login.do" class="button is-light">
+                            <a href="${path999}/member/login.do" class="button is-light">
                                 Log in
                             </a>
                         </c:if>
                         <c:if test="${sid.equals('admin')}">
-                            <a href="${path1}/member/list.do" class="button is-light">
+                            <a href="${path999}/member/list.do" class="button is-light">
                                 MemberList
                             </a>
                         </c:if>

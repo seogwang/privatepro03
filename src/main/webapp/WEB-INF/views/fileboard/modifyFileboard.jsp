@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,12 +23,13 @@
     <figure class="visual" id="vs1">
         <ul class="imgbox">
             <li class="hero is-medium is-link">
-                <div class="hero-body">
-                    <p class="title">
-                        Medium hero
+                <div class="hero-body" style="background-size: 100%; background-image: url('${path999}/resources/img/backgroundmk.jpg'); background-position: 0px -270px;">
+                    <p class="title" style="color: white; font-weight: bold; padding-top: 70px;">
+                        TSPOON
                     </p>
-                    <p class="subtitle">
-                        Medium subtitle
+                    <p class="subtitle" style="color: white; font-weight: bold; ">
+                        내 아이의 하루를 담다.<br>
+                        부모의 하루를 열다.<br>
                     </p>
                 </div>
             </li>
@@ -39,7 +40,7 @@
             <h2 class="h1">파일 자료 수정하기</h2>
             <hr>
             <div class="container">
-                <form method="post" enctype="multipart/form-data" action="${path1}/file/modifyFileboard.do">
+                <form method="post" enctype="multipart/form-data" action="${path999}/file/modifyFileboard.do">
                     <table class="table table-active">
                         <tbody>
                         <tr>
@@ -59,7 +60,7 @@
                             <td>
                                 현재 파일 : <br>
                                 <c:forEach var="file" items="${fileboard.fileList}">
-                                    <a href="${path1}/resources/upload/${file.originFile}" title="${file.fileSize}" download>${file.originFile}</a>
+                                    <a href="${path999}/resources/upload/${file.originFile}" title="${file.fileSize}" download>${file.originFile}</a>
                                     <button type="button" class="remove_btn" style="display:inline-block;padding:0;background-color: black;color:#fff;width:18px;height:18px;font-size:12px;line-height:18px;text-align:center;border-radius:10px;" data1="${file.no}" data2="${file.postNo}">x</button><br>
                                 </c:forEach>
                                 <c:if test="${empty fileboard.fileList}">
@@ -121,7 +122,7 @@
                         <tr>
                             <td>
                                 <input type="submit" class="button is-danger" value="자료 수정" />
-                                <a href="${path1}/file/filelist1.do" class="button is-primary">파일 자료 목록</a>
+                                <a href="${path999}/file/filelist1.do" class="button is-primary">파일 자료 목록</a>
                             </td>
                         </tr>
                         </tbody>
@@ -135,7 +136,7 @@
                            postNo:parseInt($(this).attr("data2"))
                        };
                        $.ajax({
-                           url:"${path1}/file/fileRemove.do", //요청URL
+                           url:"${path999}/file/fileRemove.do", //요청URL
                            type:"post",    //요청 전송방식
                            dataType:"json",
                            data:tar,

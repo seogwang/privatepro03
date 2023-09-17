@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +43,7 @@
                         document.loginForm.userid.focus();
                     </script>
                 </c:if>
-                <form action="${path1 }/member/loginpro.do" method="post" name="loginForm">
+                <form action="${path999 }/member/loginpro.do" method="post" name="loginForm">
                     <div class="table_form_wrap">
                         <table class="table_form">
                             <tbody>

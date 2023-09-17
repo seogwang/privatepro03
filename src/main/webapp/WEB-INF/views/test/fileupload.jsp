@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +39,7 @@
             <h2 class="h1">자료실 목록</h2>
             <hr>
             <div class="container">
-                <form method="post" enctype="multipart/form-data" action="${path1}/file/fileupload1.do">
+                <form method="post" enctype="multipart/form-data" action="${path999}/file/fileupload1.do">
                     <div class="control">
                         <label for="file1" class="file-label">
                             <span style="padding:5px;margin:5px">파일1 : </span>

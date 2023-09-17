@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,9 +51,9 @@
                     <c:forEach items="${memberList }" var="member" varStatus="status">
                         <tr>
                             <td>${status.count }</td>
-                            <td><a href="${path1}/member/detail.do?id=${member.id }" title="${member.email}">${member.id }</a></td>
+                            <td><a href="${path999}/member/detail.do?id=${member.id }" title="${member.email}">${member.id }</a></td>
                             <td>
-                                <a href="${path1}/member/detail.do?id=${member.id }" title="${member.tel }">${member.name }</a>
+                                <a href="${path999}/member/detail.do?id=${member.id }" title="${member.tel }">${member.name }</a>
                             </td>
                             <td>
                                 <fmt:parseDate value="${member.regdate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />
@@ -65,7 +65,7 @@
                 </table>
                 <%-- <c:if test='${sid eq "admin"}'>  --%>
                 <div class="button-group">
-                    <a class="button" href="${path1 }/member/insert.do">회원 직권 추가</a>
+                    <a class="button" href="${path999 }/member/insert.do">회원 직권 추가</a>
                 </div>
                 <%-- </c:if> --%>
             </div>

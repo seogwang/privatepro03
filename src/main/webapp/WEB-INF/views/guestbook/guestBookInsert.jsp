@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +37,7 @@
 	      <h2 class="h1">자료실 글쓰기</h2>
 	      <hr>
 	      <div class="container">
-	      	<form action="${path1 }/guestbook/insert.do" id="writeform" method="post" enctype="multipart/form-data">
+	      	<form action="${path999 }/guestbook/insert.do" id="writeform" method="post" enctype="multipart/form-data">
 				<div class="control">
 					<label for="subject">제목:</label>
 					<input type="text" class="input" id="subject" name="subject">

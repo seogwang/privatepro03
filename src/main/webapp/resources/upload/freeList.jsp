@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
-<c:set var="path1" value="${pageContext.request.contextPath }" />
+<c:set var="path999" value="${pageContext.request.contextPath }" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +51,7 @@
 		      </table>
 			      	    <%-- <c:if test='${sid eq "admin"}'>  --%> 
 		      	<div class="button-group">
-				  <a class="button" href="${path1 }/free/insert.do">글쓰기</a>
+				  <a class="button" href="${path999 }/free/insert.do">글쓰기</a>
 				</div>
 			<%-- </c:if> --%>
 	      </div>

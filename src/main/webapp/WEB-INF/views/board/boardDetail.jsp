@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path999" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,9 +55,9 @@
 		      	</tbody>
 		      </table>
 				<div class="button-group">
-				  <a class="button" href="${path1 }/board/list.do">글 목록</a>
-				  <a class="button" href="${path1 }/board/delete.do?seq=${dto.seq}">글 삭제</a>
-				  <a class="button" href="${path1 }/board/edit.do?seq=${dto.seq}">글 수정</a>
+				  <a class="button" href="${path999 }/board/list.do">글 목록</a>
+				  <a class="button" href="${path999 }/board/delete.do?seq=${dto.seq}">글 삭제</a>
+				  <a class="button" href="${path999 }/board/edit.do?seq=${dto.seq}">글 수정</a>
 				</div>
 	      </div>
 	    </div>
