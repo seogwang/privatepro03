@@ -11,7 +11,7 @@
     <title>테스트 메뉴</title>
 </head>
 <body>
-<c:set var="path0" value="/pro03" />
+<c:set var="path0" value="<%=request.getContextPath() %>" />
 <ul class="list">
     <li><a href="${path1}/sample/main.do">RequestMapping 방식 : Get</a></li>
     <li><a href="${path1}/sample/get1.do?id=kkt&pw=1234">GetMapping 방식 : request+model</a></li>

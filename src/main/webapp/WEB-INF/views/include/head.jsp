@@ -9,11 +9,11 @@
 <!-- 오픈그래프 -->
 <!-- 기타 설정 -->
 <!-- 폰트 -->
+<style>
+    /* 공통 사용자 정의 스타일 */
+    #ft { border-top:3px solid #369; }
+    .control { margin-top:10px; margin-bottom:10px; }
+</style>
 <script src="${path0}/resources/js/jquery-3.7.1.js"></script>
 <link rel="stylesheet" href="${path0}/resources/css/normalize.css" />
 <link rel="stylesheet" href="${path0}/resources/css/bulma.css">
-<style>
-/* 공통 사용자 정의 스타일 */
-#ft { border-top:3px solid #369; }
-.control { margin-top:10px; margin-bottom:10px; }
-</style>

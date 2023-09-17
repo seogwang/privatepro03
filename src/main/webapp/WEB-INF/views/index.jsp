@@ -35,7 +35,7 @@
         </ul>
     </figure>
     <div class="contents">
-        ${today } <h2>${myName }</h2><hr>
+        <!-- ${today } <h2>${myName }</h2><hr> -->
         <div class="columns loginModule">
             <div class="column"></div>
             <div class="column"></div>
