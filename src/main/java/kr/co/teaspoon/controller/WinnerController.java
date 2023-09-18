@@ -1,7 +1,7 @@
 package kr.co.teaspoon.controller;
 
-import kr.co.teaspoon.dto.Event;
-import kr.co.teaspoon.service.EventService;
+import kr.co.teaspoon.dto.Winner;
+import kr.co.teaspoon.service.WinnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,64 +18,64 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller
-@RequestMapping("/event/*")
-public class EventController {
+@RequestMapping("/winner/*")
+public class WinnerController {
 
     @Autowired
-    private EventService eventService;
+    private WinnerService winnerService;
 
-    @GetMapping("list.do")		//event/list.do
-    public String geteventList(Model model) throws Exception {
-        List<Event> eventList = eventService.eventList();
-        model.addAttribute("eventList", eventList);
-        return "/event/eventList";
+    @GetMapping("list.do")		//winner/list.do
+    public String getwinnerList(Model model) throws Exception {
+        List<Winner> winnerList = winnerService.winnerList();
+        model.addAttribute("winnerList", winnerList);
+        return "/winner/winnerList";
     }
 
-    @GetMapping("detail.do")	//event/detail.do?bno=1
-    public String geteventDetail(HttpServletRequest request, Model model) throws Exception {
+    @GetMapping("detail.do")	//winner/detail.do?bno=1
+    public String getwinnerDetail(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
-        Event dto = eventService.eventDetail(bno);
+        Winner dto = winnerService.winnerDetail(bno);
         model.addAttribute("dto", dto);
-        return "/event/eventDetail";
+        return "/winner/winnerDetail";
     }
 
     @GetMapping("insert.do")
     public String insertForm(HttpServletRequest request, Model model) throws Exception {
-        return "/event/eventInsert";
+        return "/winner/winnerInsert";
     }
 
     @PostMapping("insert.do")
-    public String eventInsert(HttpServletRequest request, Model model) throws Exception {
-        Event dto = new Event();
+    public String winnerInsert(HttpServletRequest request, Model model) throws Exception {
+        Winner dto = new Winner();
         dto.setTitle(request.getParameter("title"));
         dto.setContent(request.getParameter("content"));
-        eventService.eventInsert(dto);
+        winnerService.winnerInsert(dto);
         return "redirect:list.do";
     }
 
     @GetMapping("delete.do")
-    public String eventDelete(HttpServletRequest request, Model model) throws Exception {
+    public String winnerDelete(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
-        eventService.eventDelete(bno);
+        winnerService.winnerDelete(bno);
         return "redirect:list.do";
     }
 
     @GetMapping("edit.do")
     public String editForm(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
-        Event dto = eventService.eventDetail(bno);
+        Winner dto = winnerService.winnerDetail(bno);
         model.addAttribute("dto", dto);
-        return "/event/eventEdit";
+        return "/winner/winnerEdit";
     }
 
     @PostMapping("edit.do")
-    public String eventEdit(HttpServletRequest request, Model model) throws Exception {
+    public String winnerEdit(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
-        Event dto = new Event();
+        Winner dto = new Winner();
         dto.setBno(bno);
         dto.setTitle(request.getParameter("title"));
         dto.setContent(request.getParameter("content"));
-        eventService.eventEdit(dto);
+        winnerService.winnerEdit(dto);
         return "redirect:list.do";
     }
 
@@ -118,7 +118,7 @@ public class EventController {
 
             String callback = request.getParameter("CKEditorFuncNum");
             printWriter = response.getWriter();
-            String fileUrl = "/pro03/event/ckImgSubmit.do?uid=" + uid + "&fileName=" + fileName; // 작성화면
+            String fileUrl = "/pro03/winner/ckImgSubmit.do?uid=" + uid + "&fileName=" + fileName; // 작성화면
 
             // 업로드시 메시지 출력
             printWriter.println("{\"filename\" : \""+fileName+"\", \"uploaded\" : 1, \"url\":\""+fileUrl+"\"}");

@@ -72,7 +72,7 @@
                         <a href="${path999 }/event/list.do" class="navbar-item">
                             진행중인 이벤트
                         </a>
-                        <a href="${path999 }/eventwinner/list.do" class="navbar-item">
+                        <a href="${path999 }/winner/list.do" class="navbar-item">
                             이벤트 당첨자
                         </a>
                         <a href="${path999 }/survey/list.do" class="navbar-item">
