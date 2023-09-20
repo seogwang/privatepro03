@@ -51,36 +51,12 @@
 	      <h2 class="h1">윜이슈 게시판 목록</h2>
 	      <hr>
 	      <div class="container">
-		      <!-- <table>
-		      	<thead>
-		      		<tr>
-		      			<th>No</th>
-		      			<th>Title</th>
-		      			<th>RegDate</th>
-		      			<th>Visited</th>
-		      		</tr>
-		      	</thead>
-		      	<tbody>
-				<c:if test="${not empty surveyList }">
-		      	<c:forEach items="${surveyList }" var="survey" varStatus="status">
-		      		<tr>
-		      			<td>${status.count }</td>
-		      			<td><a href="${path999}/survey/detail.do?sno=${survey.sno }">${survey.title }</a></td>
-		      			<td>
-	      					<fmt:parseDate value="${survey.regdate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />
-	      					<fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" />
-		      			</td>
-		      			<td>${survey.visited }</td>
-		      		</tr>
-		      	</c:forEach>
-				</c:if>
-				<c:if test="${empty surveyList }">
-					<tr>
-						<td colspan="4">설문 게시판에 글이 존재하지 않습니다.</td>
-					</tr>
-				</c:if>
-		      	</tbody>
-		      </table> -->
+			  <div class="button-group" style="float: right">
+				  <c:if test="${sid.equals('admin')}">
+					  <a class="button is-info" href="${path999 }/survey/insert.do">설문 등록 하기</a>
+				  </c:if>
+			  </div>
+			  <%-- </c:if> --%>
 			  <section class="surveybox">
 				  <div class="box_wrap">
 					  <ul class="lst">
@@ -103,13 +79,6 @@
 					  </ul>
 				  </div>
 			  </section>
-			      	    <%-- <c:if test='${sid eq "admin"}'>  --%> 
-		      	<div class="button-group">
-					<c:if test="${sid.equals('admin')}">
-						<a class="button is-info" href="${path999 }/survey/insert.do">설문 등록 하기</a>
-					</c:if>
-				</div>
-			<%-- </c:if> --%>
 	      </div>
 
 	    </div>

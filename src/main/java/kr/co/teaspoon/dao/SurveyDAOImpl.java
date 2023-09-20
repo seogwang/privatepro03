@@ -27,6 +27,12 @@ public class SurveyDAOImpl implements SurveyDAO {
     public void surveyInsert(Survey dto) throws Exception {
         sqlSession.insert("survey.surveyInsert", dto);
     }
+
+    @Override
+    public void sanswerInsert(Survey dto) throws Exception {
+        sqlSession.insert("survey.sanswerInsert", dto);
+    }
+
     @Override
     public void surveyDelete(int sno) throws Exception {
         sqlSession.delete("survey.surveyDelete", sno);

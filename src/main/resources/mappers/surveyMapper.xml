@@ -5,7 +5,7 @@
 <mapper namespace="survey">
 	<!-- 자유게시판 목록 -->
 	<select id="surveyList" resultType="kr.co.teaspoon.dto.Survey">
-		select * from survey order by regdate desc
+		select * from survey where lev=0 order by regdate desc
 	</select>
 	<!-- 글 상세보기 -->
 	<select id="surveyDetail" resultType="kr.co.teaspoon.dto.Survey">

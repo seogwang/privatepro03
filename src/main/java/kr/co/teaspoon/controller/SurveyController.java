@@ -57,6 +57,14 @@ public class SurveyController {
         return "redirect:list.do";
     }
 
-   // @PostMapping("sanswerInsert.do")
-
+   @PostMapping("sanswerInsert.do")
+    public String getsanserInsert(HttpServletRequest request, Model model) throws Exception {
+       Survey dto = new Survey();
+       dto.setPar(Integer.parseInt(request.getParameter("sno")));
+       dto.setTitle(request.getParameter("title"));
+       dto.setAuthor(request.getParameter("sid"));
+       dto.setAns(Integer.parseInt(request.getParameter("ans")));
+       surveyService.sanswerInsert(dto);
+       return "redirect:list.do";
+   }
 }

@@ -56,62 +56,53 @@
 							<th style="background-color:#dcdcdc">설문 2 내용</th>
 							<td>
 								<input type="text" name="q2" id="q2" placeholder="설문 2">
-								<input type="hidden" name="q2" id="q2_" value="">
 							</td>
 						</tr>
 						<tr>
 							<th style="background-color:#dcdcdc">설문 3 내용</th>
 							<td>
 								<input type="text" name="q3" id="q3" placeholder="설문 3">
-								<input type="hidden" name="q3" id="q3_" value="">
 							</td>
 						</tr>
 						<tr>
 							<th style="background-color:#dcdcdc">설문 4 내용</th>
 							<td>
 								<input type="text" name="q4" id="q4" placeholder="설문 4">
-								<input type="hidden" name="q4" id="q4_" value="">
 							</td>
 						</tr>
 						<tr>
 							<th style="background-color:#dcdcdc">설문 5 내용</th>
 							<td>
 								<input type="text" name="q5" id="q5" placeholder="설문 5">
-								<input type="hidden" name="q5" id="q5_" value="">
 							</td>
 						</tr>
 						<tr>
 							<th style="background-color:#dcdcdc">설문 6 내용</th>
 							<td>
 								<input type="text" name="q6" id="q6" placeholder="설문 6">
-								<input type="hidden" name="q6" id="q6_" value="">
 							</td>
 						</tr>
 						<tr>
 							<th style="background-color:#dcdcdc">설문 7 내용</th>
 							<td>
 								<input type="text" name="q7" id="q7" placeholder="설문 7">
-								<input type="hidden" name="q7" id="q7_" value="">
 							</td>
 						</tr>
 						<tr>
 							<th style="background-color:#dcdcdc">설문 8 내용</th>
 							<td>
 								<input type="text" name="q8" id="q8" placeholder="설문 8">
-								<input type="hidden" name="q8" id="q8_" value="">
 							</td>
 						</tr>
 						<tr>
 							<th style="background-color:#dcdcdc">설문 9 내용</th>
 							<td>
 								<input type="text" name="q9" id="q9" placeholder="설문 9">
-								<input type="hidden" name="q9" id="q9_" value="">
 							</td>
 						</tr><tr>
 							<th style="background-color:#dcdcdc">설문 10 내용</th>
 							<td>
 								<input type="text" name="q10" id="q10" placeholder="설문 10">
-								<input type="hidden" name="q10" id="q10_" value="">
 							</td>
 						</tr>
 						<tr>

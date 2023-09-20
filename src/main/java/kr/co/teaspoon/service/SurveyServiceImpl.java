@@ -28,6 +28,11 @@ public class SurveyServiceImpl implements SurveyService{
     }
 
     @Override
+    public void sanswerInsert(Survey dto) throws Exception {
+        surveyDAO.sanswerInsert(dto);
+    }
+
+    @Override
     public void surveyDelete(int sno) throws Exception {
         surveyDAO.surveyDelete(sno);
     }
