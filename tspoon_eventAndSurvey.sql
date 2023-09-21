@@ -50,7 +50,8 @@ CREATE TABLE survey(
   lev int default 0,
   par INT DEFAULT 0,
   author VARCHAR(100),
-  visited INT(11) DEFAULT 0
+  visited INT(11) DEFAULT 0,
+  content VARCHAR(1500)
 );
 
 ALTER TABLE survey MODIFY par INT DEFAULT 0;
@@ -84,3 +85,12 @@ SELECT * FROM survey;
 select * from survey where par=0 and author='admin';
 
 update survey set q1='설문 1', q2='설문 2', q3='설문 3', q4='설문 4', q5='설문 5', q6='설문 6', q7='설문 7', q8='설문 8', q9='설문 9', q10='설문 10' where sno=1;
+
+ALTER TABLE survey modify q1 VARCHAR(200) NULL;
+
+
+SELECT * FROM event;
+
+
+ALTER TABLE survey ADD COLUMN content VARCHAR(1500);
+ALTER TABLE survey MODIFY title VARCHAR(200);

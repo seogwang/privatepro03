@@ -31,3 +31,6 @@ rec INT DEFAULT 0 -- 추천수
 insert into event values(default, '이벤트 글 제목1입니다.', '여기는 이벤트 글1에 대한 내용입니다.', default, DEFAULT, 'admin', default);
 
 COMMIT;
+
+SELECT * FROM survey;
+
