@@ -20,20 +20,7 @@
 <div class="container is-fullhd">
 	<!-- 헤더 부분 인클루드 -->
 	<jsp:include page="../include/hd.jsp"></jsp:include>
-	<figure class="visual" id="vs1">
-		<ul class="imgbox">
-			<li class="hero is-medium is-link">
-				<div class="hero-body">
-					<p class="title">
-						Medium hero
-					</p>
-					<p class="subtitle">
-						Medium subtitle
-					</p>
-				</div>
-			</li>
-		</ul>
-	</figure>
+	<jsp:include page="../include/banner.jsp" />
 	<div class="content" id="contents">
 	    <div class="row column text-center">
 	      <h2 class="h1">자료실 목록</h2>

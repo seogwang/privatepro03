@@ -16,7 +16,7 @@
 		select count(*) from free
 	</select>
 	<insert id="freeInsert">
-		insert into free values (default, #{title}, #{content}, default, 0, 'admin', 0)
+		insert into free values (default, #{title}, #{content}, default, 0, #{id}, 0)
 	</insert>
 	<delete id="freeDelete">
 		delete from free where bno=#{bno}

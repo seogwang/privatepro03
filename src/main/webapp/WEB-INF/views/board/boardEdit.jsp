@@ -19,7 +19,7 @@
 		<!-- 헤더 부분 인클루드 -->
 	 	<jsp:include page="../include/hd.jsp"></jsp:include>
     </header>
-	
+	<jsp:include page="../include/banner.jsp" />
 	<div class="content" id="content">
 	    <div class="row column text-center">
 	      <h2 class="h1">공지사항 글 수정</h2>

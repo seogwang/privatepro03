@@ -24,6 +24,11 @@ public class SurveyDAOImpl implements SurveyDAO {
     }
 
     @Override
+    public Survey lastSurvey() throws Exception {
+        return sqlSession.selectOne("survey.lastSurvey");
+    }
+
+    @Override
     public void surveyInsert(Survey dto) throws Exception {
         sqlSession.insert("survey.surveyInsert", dto);
     }
@@ -41,5 +46,20 @@ public class SurveyDAOImpl implements SurveyDAO {
     @Override
     public void surveyEdit(Survey dto) throws Exception {
         sqlSession.update("survey.surveyEdit", dto);
+    }
+
+    @Override
+    public Survey ckAuthor(Survey dto) throws Exception {
+        return sqlSession.selectOne("survey.ckAuthor", dto);
+    }
+
+    @Override
+    public int totalSACount(Survey dto) throws Exception {
+        return sqlSession.selectOne("survey.totalSACount", dto);
+    }
+
+    @Override
+    public int SAOneCount(Survey dto) throws Exception {
+        return sqlSession.selectOne("survey.SAOnceCount", dto);
     }
 }

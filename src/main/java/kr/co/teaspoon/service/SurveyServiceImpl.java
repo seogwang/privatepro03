@@ -23,6 +23,11 @@ public class SurveyServiceImpl implements SurveyService{
     }
 
     @Override
+    public Survey lastSurvey() throws Exception {
+        return surveyDAO.lastSurvey();
+    }
+
+    @Override
     public void surveyInsert(Survey dto) throws Exception {
         surveyDAO.surveyInsert(dto);
     }
@@ -40,5 +45,20 @@ public class SurveyServiceImpl implements SurveyService{
     @Override
     public void surveyEdit(Survey dto) throws Exception {
         surveyDAO.surveyEdit(dto);
+    }
+
+    @Override
+    public Survey ckAuthor(Survey dto) throws Exception {
+        return surveyDAO.ckAuthor(dto);
+    }
+
+    @Override
+    public int totalSACount(Survey dto) throws Exception {
+        return surveyDAO.totalSACount(dto);
+    }
+
+    @Override
+    public int SAOneCount(Survey dto) throws Exception {
+        return surveyDAO.SAOneCount(dto);
     }
 }

@@ -20,21 +20,7 @@
 <div class="container is-fullhd">
 	<!-- 헤더 부분 인클루드 -->
 	<jsp:include page="../include/hd.jsp"></jsp:include>
-	<figure class="visual" id="vs1">
-		<ul class="imgbox">
-			<li class="hero is-medium is-link">
-				<div class="hero-body" style="background-size: 100%; background-image: url('${path999}/resources/img/backgroundmk.jpg'); background-position: 0px -270px;">
-					<p class="title" style="color: white; font-weight: bold; padding-top: 70px;">
-						TSPOON
-					</p>
-					<p class="subtitle" style="color: white; font-weight: bold; ">
-						내 아이의 하루를 담다.<br>
-						부모의 하루를 열다.<br>
-					</p>
-				</div>
-			</li>
-		</ul>
-	</figure>
+	<jsp:include page="../include/banner.jsp" />
 	<div class="content" id="contents">
 	    <div class="row column text-center">
 	      <h2 class="h1">자유게시판 목록</h2>
@@ -43,10 +29,11 @@
 		      <table>
 		      	<thead>
 		      		<tr>
-		      			<th>No</th>
-		      			<th>Title</th>
-		      			<th>RegDate</th>
-		      			<th>Visited</th>
+		      			<th>번호</th>
+		      			<th>제목</th>
+						<th>작성자</th>
+		      			<th>작성일</th>
+		      			<th>조회수</th>
 		      		</tr>
 		      	</thead>
 		      	<tbody>
@@ -55,6 +42,7 @@
 		      		<tr>
 		      			<td>${status.count }</td>
 		      			<td><a href="${path999}/free/detail.do?bno=${free.bno }">${free.title }</a></td>
+						<td>${free.id }</td>
 		      			<td>
 	      					<fmt:parseDate value="${free.regdate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />
 	      					<fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" />

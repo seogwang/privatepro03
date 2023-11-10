@@ -19,21 +19,7 @@
 <body>
 <div class="container is-fullhd">
     <jsp:include page="./include/hd.jsp" />
-    <figure class="visual" id="vs1">
-        <ul class="imgbox">
-            <li class="hero is-medium is-link">
-                <div class="hero-body" style="background-size: 100%; background-image: url('${path999}/resources/img/backgroundmk.jpg'); background-position: 0px -270px;">
-                    <p class="title" style="color: white; font-weight: bold; padding-top: 70px;">
-                        TSPOON
-                    </p>
-                    <p class="subtitle" style="color: white; font-weight: bold; ">
-                        내 아이의 하루를 담다.<br>
-                        부모의 하루를 열다.<br>
-                    </p>
-                </div>
-            </li>
-        </ul>
-    </figure>
+    <jsp:include page="./include/banner.jsp" />
     <div class="contents">
         <!-- ${today } <h2>${myName }</h2><hr> -->
         <div class="columns loginModule">

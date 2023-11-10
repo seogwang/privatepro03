@@ -20,7 +20,7 @@
 		.lst { list-style: none; clear:both; width: 1290px; margin-bottom: 30px; }
 
 		.lst:after { content:""; display:block; width: 100%; clear:both; }
-		.lst li { list-style: none; width: 600px; height: 340px; background-color:#fff; float:left; box-sizing:border-box; border:1px solid #333; margin-top: 0.25em;
+		.lst li { list-style: none; width: 600px; height: 340px; background-color:#fff; float:left; box-sizing:border-box; border:0px solid #333; margin-top: 0.25em;
 			margin-left: 30px; margin-right: 30px; box-shadow: 3px; }
 		.lst li:nth-child(2n) { margin-right: 0; }
 
@@ -32,23 +32,10 @@
 <div class="container is-fullhd">
 	<!-- 헤더 부분 인클루드 -->
 	<jsp:include page="../include/hd.jsp"></jsp:include>
-	<figure class="visual" id="vs1">
-		<ul class="imgbox">
-			<li class="hero is-medium is-link">
-				<div class="hero-body">
-					<p class="title">
-						Medium hero
-					</p>
-					<p class="subtitle">
-						Medium subtitle
-					</p>
-				</div>
-			</li>
-		</ul>
-	</figure>
+	<jsp:include page="../include/banner.jsp" />
 	<div class="content" id="contents">
 	    <div class="row column text-center">
-	      <h2 class="h1">이벤트 게시판 목록</h2>
+	      <h2 class="h1">이벤트 목록</h2>
 	      <hr>
 	      <div class="container">
 		      <!-- <table>

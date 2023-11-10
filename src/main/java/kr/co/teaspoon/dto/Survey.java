@@ -26,4 +26,5 @@ public class Survey {
     private int par;
     private String author;
     private int visited;
+    private String content;
 }

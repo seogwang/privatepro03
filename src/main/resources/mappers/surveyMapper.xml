@@ -11,20 +11,26 @@
 	<select id="surveyDetail" resultType="kr.co.teaspoon.dto.Survey">
 		select * from survey where sno=#{sno}
 	</select>
-	<!-- 답변 수 카운트 -->
-	<select id="totalCount" resultType="integer" >
-		select count(*) from survey where sno=#{sno}
+	<!-- 최신 글 1개 조회 -->
+	<select id="lastSurvey" resultType="kr.co.teaspoon.dto.Survey">
+		SELECT * FROM survey WHERE LEV=0 ORDER BY regdate desc LIMIT 1;
 	</select>
-	<select id="surveyCount">
-		select count(*) from where sno=#{sno} and ans=#{ans}
+
+	<!-- 전체 답변 수 카운트 -->
+	<select id="totalSACount" resultType="integer" >
+		select count(*) from survey where par=#{par} and lev=1
+	</select>
+	<!-- 특정 답변 수 카운트 -->
+	<select id="SAOneCount">
+		select count(*) from where par=#{par} and lev=1 and ans=#{ans}
 	</select>
 	<insert id="surveyInsert">
-		insert into survey values (default, #{title}, #{q1}, #{q2}, #{q3}, #{q4}, #{q5}, #{q6}, #{q7}, #{q8}, #{q9}, #{q10}, default, default, default, default, 'admin', default)
+		insert into survey values (default, #{title}, #{q1}, #{q2}, #{q3}, #{q4}, #{q5}, #{q6}, #{q7}, #{q8}, #{q9}, #{q10}, default, default, default, default, 'admin', default, #{content})
 	</insert>
 	<insert id="sanswerInsert">
-		insert into survey values (default, #{title}, #{q1}, #{q2}, #{q3}, #{q4}, #{q5}, #{q6}, #{q7}, #{q8}, #{q9}, #{q10}, default, #{ans}, 1, #{par}, #{author}, default)
+		insert into survey values (default, #{title}, #{q1}, #{q2}, #{q3}, #{q4}, #{q5}, #{q6}, #{q7}, #{q8}, #{q9}, #{q10}, default, #{ans}, 1, #{par}, #{author}, default, default)
 	</insert>
-	<select id="ckauthor">
+	<select id="ckAuthor" resultType="kr.co.teaspoon.dto.Survey">
 		select * from survey where par=#{par} and author=#{author}
 	</select>
 	<delete id="surveyDelete">

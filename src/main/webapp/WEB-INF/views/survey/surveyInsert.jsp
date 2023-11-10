@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path999" value="<%=request.getContextPath() %>" />
+<c:set var="path1" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,108 +13,93 @@
 	<title>설문 등록 하기</title>
 	<!-- 헤드 부분 인클루드 -->
 	<jsp:include page="../include/head.jsp"></jsp:include>
+	<script type="text/javascript" src="${path1 }/resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="container is-fullhd">
 	<!-- 헤더 부분 인클루드 -->
 	<jsp:include page="../include/hd.jsp"></jsp:include>
-	<figure class="visual" id="vs1">
-		<ul class="imgbox">
-			<li class="hero is-medium is-link">
-				<div class="hero-body">
-					<p class="title">
-						Medium hero
-					</p>
-					<p class="subtitle">
-						Medium subtitle
-					</p>
+	<jsp:include page="../include/banner.jsp" />
+		<div class="columns">
+			<div class="column is-10">
+				<div class="conwrap">
+					<div class="box">
+						<span class="title">설문 등록</span>
+					</div>
 				</div>
-			</li>
-		</ul>
-	</figure>
-	<div class="content" id="contents">
-		<div class="row column text-center">
-			<h2 class="h1">설문 등록</h2>
-			<hr>
-			<div class="container">
-				<form name="frm1" id="frm1" action="${path999 }/survey/insert.do" method="post">
-					<table id="table1">
-						<tbody>
-						<tr>
-							<th style="background-color:#dcdcdc">제목</th>
-							<td>
-								<input type="text" name="title" id="title" required style="width:700px; float:left;">
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 1 내용</th>
-							<td>
-								<input type="text" name="q1" id="q1" placeholder="설문 1" required>
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 2 내용</th>
-							<td>
-								<input type="text" name="q2" id="q2" placeholder="설문 2">
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 3 내용</th>
-							<td>
-								<input type="text" name="q3" id="q3" placeholder="설문 3">
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 4 내용</th>
-							<td>
-								<input type="text" name="q4" id="q4" placeholder="설문 4">
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 5 내용</th>
-							<td>
-								<input type="text" name="q5" id="q5" placeholder="설문 5">
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 6 내용</th>
-							<td>
-								<input type="text" name="q6" id="q6" placeholder="설문 6">
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 7 내용</th>
-							<td>
-								<input type="text" name="q7" id="q7" placeholder="설문 7">
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 8 내용</th>
-							<td>
-								<input type="text" name="q8" id="q8" placeholder="설문 8">
-							</td>
-						</tr>
-						<tr>
-							<th style="background-color:#dcdcdc">설문 9 내용</th>
-							<td>
-								<input type="text" name="q9" id="q9" placeholder="설문 9">
-							</td>
-						</tr><tr>
-							<th style="background-color:#dcdcdc">설문 10 내용</th>
-							<td>
-								<input type="text" name="q10" id="q10" placeholder="설문 10">
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<a class="button is-info" href="${path999 }/survey/list.do">글 목록</a>
-								<input type="submit" class="button is-success" value="설문 등록" >
-								<input type="reset" class="button is-danger" value="취소" >
-							</td>
-						</tr>
-						</tbody>
-					</table>
-				</form>
+
+				<div class="formwrap">
+					<form action="${path1 }/survey/insert.do" method="post">
+						<div class="field">
+							<label class="label" for="title">제목</label>
+							<div class="control">
+								<input type="text" name="title" id="title" class="input" maxlength="98" required>
+							</div>
+						</div>
+						<div class="field">
+							<label class="label" for="content">내용</label>
+							<textarea name="content" id="content" class="textarea" rows="8" cols="100" maxlength="1400" required></textarea>
+							<script>
+								CKEDITOR.replace('content',	{filebrowserUploadUrl:'${path1}/survey/imageUpload.do'});
+							</script>
+						</div>
+
+						<div class="field">
+							<label class="label" for="content">설문 1 내용</label>
+							<input type="text" name="q1" id="q1" placeholder="설문 1" class="input" required>
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 2 내용</label>
+							<input type="text" name="q2" id="q2" placeholder="설문 2" class="input" >
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 3 내용</label>
+							<input type="text" name="q3" id="q3" placeholder="설문 3" class="input" >
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 4 내용</label>
+							<input type="text" name="q4" id="q4" placeholder="설문 4" class="input" >
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 5 내용</label>
+							<input type="text" name="q5" id="q5" placeholder="설문 5" class="input" >
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 6 내용</label>
+							<input type="text" name="q6" id="q6" placeholder="설문 6" class="input" >
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 7 내용</label>
+							<input type="text" name="q7" id="q7" placeholder="설문 7" class="input" >
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 8 내용</label>
+							<input type="text" name="q8" id="q8" placeholder="설문 8" class="input" >
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 9 내용</label>
+							<input type="text" name="q9" id="q9" placeholder="설문 9" class="input" >
+						</div>
+						<div class="field">
+							<label class="label" for="content">설문 10 내용</label>
+							<input type="text" name="q10" id="q10" placeholder="설문 10" class="input" >
+						</div>
+
+						<div class="columns">
+							<div class="column is-3"></div>
+							<div class="column is-2">
+								<a class="button is-fullwidth is-primary" href="${path1 }/suvey/list.do">글 목록</a>
+							</div>
+							<div class="column is-2">
+								<button type="submit" class="button is-fullwidth is-success">설문 등록</button>
+							</div>
+							<div class="column is-2">
+								<button type="reset" class="button is-fullwidth is-danger">취소</button>
+							</div>
+							<div class="column is-3"></div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

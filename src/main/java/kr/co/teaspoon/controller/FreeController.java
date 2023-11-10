@@ -10,10 +10,12 @@ import kr.co.teaspoon.service.FreeService;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.mail.Session;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.util.List;
 import java.util.UUID;
@@ -24,6 +26,9 @@ public class FreeController {
 
     @Autowired
     private FreeService freeService;
+
+    @Autowired
+    HttpSession session;
 
     @GetMapping("list.do")		//free/list.do
     public String getfreeList(Model model) throws Exception {
@@ -48,6 +53,8 @@ public class FreeController {
     @PostMapping("insert.do")
     public String freeInsert(HttpServletRequest request, Model model) throws Exception {
         Free dto = new Free();
+        String id = (String) session.getAttribute("sid");
+        dto.setId(id);
         dto.setTitle(request.getParameter("title"));
         dto.setContent(request.getParameter("content"));
         freeService.freeInsert(dto);
